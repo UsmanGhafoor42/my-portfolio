@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   title: "Portfolio | Professional Developer",
   description:
     "Professional portfolio showcasing projects, skills, and experience",
+  icons: {
+    icon: [{ url: "/images/favicon.png", type: "image/png" }],
+    shortcut: "/images/favicon.png",
+    apple: "/images/favicon.png",
+  },
 };
 
 export default function RootLayout({
