@@ -96,7 +96,7 @@ export default function Contact() {
 
   return (
     <section ref={sectionRef} id="contact" className="py-32 bg-white">
-      <div className="container-layout max-w-3xl mx-auto">
+      <div className="container-layout max-w-3xl mx-auto flex flex-col gap-10">
         <h2
           ref={titleRef}
           className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-16 text-center opacity-100"

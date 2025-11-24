@@ -42,9 +42,9 @@ export default function Navigation({
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className={`text-sm font-semibold capitalize transition-colors ${
+                className={`text-lg font-semibold capitalize transition-colors ${
                   activeSection === item
-                    ? "text-white border-b-2 border-white pb-1"
+                    ? " text-amber-600 border-white pb-1"
                     : "text-white/80 hover:text-white"
                 }`}
               >

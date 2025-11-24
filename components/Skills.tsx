@@ -69,7 +69,7 @@ export default function Skills() {
 
   return (
     <section ref={sectionRef} id="skills" className="py-32">
-      <div className="container-layout max-w-5xl mx-auto">
+      <div className="container-layout max-w-5xl mx-auto flex flex-col gap-10">
         <h2
           ref={titleRef}
           className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-16 opacity-100"

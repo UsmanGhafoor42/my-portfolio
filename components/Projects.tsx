@@ -95,10 +95,10 @@ export default function Projects() {
 
   return (
     <section ref={sectionRef} id="projects" className="py-32 bg-white">
-      <div className="container-layout max-w-7xl mx-auto">
+      <div className="container-layout max-w-7xl mx-auto flex flex-col gap-10">
         <h2
           ref={titleRef}
-          className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-20 opacity-100"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold text-black opacity-100"
         >
           Projects
         </h2>
