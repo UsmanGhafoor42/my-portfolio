@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("/fonts/NeueMontreal-Light.ttf") format("truetype");
+}
+
+:root {
+  --background: #FAFAFA;
+  --font-sans: "Neue Montreal", sans-serif;
+  --foreground: #072800;
+  --accent: #072800;
+  --card-bg: #FFFFFF;
+  --text-secondary: #4A4A4A;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+button {
+  font-family: inherit;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out;
+}
+
+/* Container Layout Class */
+.container-layout {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem; /* px-6 */
+  padding-right: 1.5rem; /* px-6 */
+}
+
+@media (min-width: 640px) {
+  .container-layout {
+    padding-left: 2rem; /* sm:px-8 */
+    padding-right: 2rem; /* sm:px-8 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-layout {
+    padding-left: 3rem; /* lg:px-12 */
+    padding-right: 3rem; /* lg:px-12 */
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-layout {
+    max-width: 1280px;
+  }
+}
+
+/* Smooth scroll behavior */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
