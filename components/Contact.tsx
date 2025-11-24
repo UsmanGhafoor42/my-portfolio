@@ -10,21 +10,21 @@ const contactMethods = [
   {
     icon: "✉",
     title: "Email",
-    description: "your.email@example.com",
-    href: "mailto:your.email@example.com",
+    description: "eurodeveloper1999@gmail.com",
+    href: "mailto:eurodeveloper1999@gmail.com",
   },
   {
     icon: "in",
     title: "LinkedIn",
     description: "Connect with me",
-    href: "https://linkedin.com/in/yourprofile",
+    href: "https://www.linkedin.com/in/muhammadshaharyarshafique/",
     isIcon: true,
   },
   {
     icon: "</>",
     title: "GitHub",
     description: "View my code",
-    href: "https://github.com/yourusername",
+    href: "https://github.com/Shaharyarkhan123",
     isIcon: true,
   },
 ];

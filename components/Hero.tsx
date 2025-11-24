@@ -104,7 +104,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
             ref={titleRef}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 text-black leading-tight opacity-100"
           >
-            Hi, I'm <span className="text-[#072800]">Your Name</span>
+            Hi, I'm <span className="text-[#072800]">Euro Developers</span>
           </h1>
           <p
             ref={subtitleRef}

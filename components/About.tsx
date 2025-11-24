@@ -80,18 +80,43 @@ export default function About() {
             <div className="space-y-5 sm:space-y-6">
               <div className="pb-4 sm:pb-5">
                 <h4 className="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3">
-                  Your Degree / Certification
+                  Master's in Research Computer and System Engineering
                 </h4>
+
                 <p className="text-base sm:text-lg text-[#4A4A4A]">
-                  Institution Name • Year
+                  Technische Universität Ilmenau • Continuing...
                 </p>
               </div>
               <div className="pb-4 sm:pb-5">
                 <h4 className="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3">
-                  Your Job Title
+                  Bachelors in Software Engineering
                 </h4>
                 <p className="text-base sm:text-lg text-[#4A4A4A]">
-                  Company Name • Year - Year
+                  Iqra University • 2023
+                </p>
+              </div>
+              <div className="pb-4 sm:pb-5">
+                <h4 className="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3">
+                  Frontend Developer
+                </h4>
+                <p className="text-base sm:text-lg text-[#4A4A4A]">
+                  Ausbildungs Basis • 07/2025 – 10/2025
+                </p>
+              </div>
+              <div className="pb-4 sm:pb-5">
+                <h4 className="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3">
+                  Software Developer
+                </h4>
+                <p className="text-base sm:text-lg text-[#4A4A4A]">
+                  DIGILAXY LTD • 06/2023 – 04/2024
+                </p>
+              </div>
+              <div className="pb-4 sm:pb-5">
+                <h4 className="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3">
+                  Software Developer Intern
+                </h4>
+                <p className="text-base sm:text-lg text-[#4A4A4A]">
+                  IT RETINA • 11/2022 – 01/2023
                 </p>
               </div>
             </div>

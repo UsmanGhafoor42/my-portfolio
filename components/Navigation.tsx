@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 interface NavigationProps {
@@ -29,12 +31,12 @@ export default function Navigation({
     >
       <div className="container-layout max-w-7xl mx-auto">
         <div className="flex items-center justify-between h-20">
-          <button
-            onClick={() => scrollToSection("home")}
+          <Link
+            href="#home"
             className="text-xl font-bold text-white hover:opacity-80 transition-opacity"
           >
-            Portfolio
-          </button>
+            <Image src="/images/logo.png" alt="Logo" width={150} height={150} />
+          </Link>
           <div className="hidden md:flex items-center gap-10">
             {["about", "projects", "skills", "contact"].map((item) => (
               <button

@@ -8,46 +8,39 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    title: "Project One",
+    title: "Licorice 4 Good",
     description:
-      "A modern web application built with React and Node.js, featuring real-time updates and responsive design.",
-    tech: ["React", "Node.js", "TypeScript"],
-    link: "#",
+      "A fundraising platform enabling organizations to sell licorice ropes and keep 50% of sales. Features include online sign-up, sample box distribution, media kits, and automated commission tracking.",
+    tech: ["Next.js", "React", "TypeScript", "E-commerce"],
+    link: "https://licorice4good.com/",
   },
   {
-    title: "Project Two",
+    title: "Southern Sweet & Sour",
     description:
-      "An e-commerce platform with secure payment integration and admin dashboard.",
-    tech: ["Next.js", "MongoDB", "Stripe"],
-    link: "#",
+      "E-commerce platform for a disabled veteran-owned licorice rope business. Includes online ordering, wholesale portal, fundraising programs, and supports Warrior's Next Adventure charity.",
+    tech: ["Next.js", "React", "E-commerce", "Payment Integration"],
+    link: "https://southernsweetandsour.com/",
   },
   {
-    title: "Project Three",
+    title: "Hot Market DTF",
     description:
-      "A mobile-first design system and component library for scalable applications.",
-    tech: ["React", "Tailwind CSS", "Storybook"],
-    link: "#",
+      "Custom DTF (Direct to Film) transfer printing service with UV sticker capabilities. Features online ordering, gang sheet creation, same-day turnaround, and order history management.",
+    tech: ["Next.js", "React", "E-commerce", "File Upload"],
+    link: "https://hotmarketdtf.com/",
   },
   {
-    title: "Project Four",
+    title: "Mega Jump Park Tickets",
     description:
-      "A data visualization dashboard with interactive charts and real-time analytics.",
-    tech: ["Vue.js", "D3.js", "Python"],
-    link: "#",
+      "European ticket booking system for trampoline park reservations. Features real-time availability, online booking, payment processing, and ticket management system.",
+    tech: ["Next.js", "React", "Booking System", "Payment Gateway"],
+    link: "https://megajumpparktickets.eu/",
   },
   {
-    title: "Project Five",
+    title: "Licorice Affiliate Program",
     description:
-      "A collaborative workspace tool with real-time editing and team management features.",
-    tech: ["Next.js", "Socket.io", "PostgreSQL"],
-    link: "#",
-  },
-  {
-    title: "Project Six",
-    description:
-      "An AI-powered content generation tool with natural language processing capabilities.",
-    tech: ["Python", "OpenAI API", "FastAPI"],
-    link: "#",
+      "Affiliate marketing platform for licorice fundraising. Enables partners to earn commissions, track referrals, manage campaigns, and access marketing materials.",
+    tech: ["Next.js", "React", "Affiliate System", "Analytics"],
+    link: "https://licoriceaffiliate.licorice4good.com/",
   },
 ];
 
@@ -105,7 +98,7 @@ export default function Projects() {
       <div className="container-layout max-w-7xl mx-auto">
         <h2
           ref={titleRef}
-          className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-16 opacity-100"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-20 opacity-100"
         >
           Projects
         </h2>
@@ -183,6 +176,8 @@ function ProjectCard({
       </div>
       <a
         href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"
         className="text-[#072800] font-bold hover:opacity-70 transition-opacity inline-flex items-center gap-2 text-base sm:text-lg lg:text-xl mt-auto"
       >
         View Project →
