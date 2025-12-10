@@ -33,16 +33,14 @@ export default function Skills() {
     if (!titleRef.current || !cardRef.current) return;
 
     const ctx = gsap.context(() => {
-      // Set initial positions BEFORE animation to prevent jumps
-      gsap.set(titleRef.current, { y: 60, opacity: 0 });
-      gsap.set(cardRef.current, { y: 60, opacity: 0 });
+      gsap.set(titleRef.current, { opacity: 0, y: 30 });
+      gsap.set(cardRef.current, { opacity: 0, y: 30 });
 
       gsap.to(titleRef.current, {
-        y: 0,
         opacity: 1,
-        duration: 1,
-        ease: "power2.out",
-        immediateRender: false,
+        y: 0,
+        duration: 0.6,
+        ease: "power1.out",
         scrollTrigger: {
           trigger: titleRef.current,
           start: "top 85%",
@@ -51,11 +49,10 @@ export default function Skills() {
       });
 
       gsap.to(cardRef.current, {
-        y: 0,
         opacity: 1,
-        duration: 1.1,
-        ease: "power2.out",
-        immediateRender: false,
+        y: 0,
+        duration: 0.6,
+        ease: "power1.out",
         scrollTrigger: {
           trigger: cardRef.current,
           start: "top 85%",
@@ -68,36 +65,62 @@ export default function Skills() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="skills" className="py-32">
-      <div className="container-layout max-w-5xl mx-auto flex flex-col gap-10">
+    <section ref={sectionRef} id="skills" className="py-32 bg-[#F5F5DC]">
+      <div className="container-layout max-w-6xl mx-auto">
         <h2
           ref={titleRef}
-          className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-16 opacity-100"
+          className="text-5xl sm:text-6xl md:text-7xl font-serif font-bold text-[#1a4d2e] mb-20 sm:mb-24 md:mb-28 lg:mb-32 opacity-100"
         >
-          Skills
+          Technical Skills
         </h2>
         <div
           ref={cardRef}
-          className="bg-[#FAFAFA] rounded-3xl px-8 py-10 sm:px-12 sm:py-14 md:px-16 md:py-20 lg:px-24 lg:py-24 xl:px-28 xl:py-28 shadow-lg border-2 border-[#072800]/10 opacity-100"
+          className="bg-white rounded-3xl px-8 py-10 sm:px-12 sm:py-14 lg:px-20 lg:py-20 shadow-lg border-2 border-[#1a4d2e]/10 opacity-100"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 sm:gap-16 lg:gap-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-black mb-6 sm:mb-8 lg:mb-10">
+              <h3 className="text-2xl font-serif font-bold text-[#1a4d2e] mb-8 flex items-center gap-2">
                 Frontend
               </h3>
-              <div className="space-y-5 sm:space-y-6 lg:space-y-7">
+              <div className="space-y-4">
                 {frontendSkills.map((skill) => (
-                  <SkillBar key={skill} skill={skill} percentage={85} />
+                  <div
+                    key={skill}
+                    className="flex items-center justify-between"
+                  >
+                    <span className="text-lg font-medium text-[#1a4d2e]">
+                      {skill}
+                    </span>
+                    <div className="w-40 h-2 bg-[#1a4d2e]/10 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-[#FF8C42] rounded-full"
+                        style={{ width: "85%" }}
+                      ></div>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
             <div>
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-black mb-6 sm:mb-8 lg:mb-10">
+              <h3 className="text-2xl font-serif font-bold text-[#1a4d2e] mb-8 flex items-center gap-2">
                 Backend & Tools
               </h3>
-              <div className="space-y-5 sm:space-y-6 lg:space-y-7">
+              <div className="space-y-4">
                 {backendSkills.map((skill) => (
-                  <SkillBar key={skill} skill={skill} percentage={80} />
+                  <div
+                    key={skill}
+                    className="flex items-center justify-between"
+                  >
+                    <span className="text-lg font-medium text-[#1a4d2e]">
+                      {skill}
+                    </span>
+                    <div className="w-40 h-2 bg-[#1a4d2e]/10 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-[#FF8C42] rounded-full"
+                        style={{ width: "80%" }}
+                      ></div>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -105,53 +128,5 @@ export default function Skills() {
         </div>
       </div>
     </section>
-  );
-}
-
-function SkillBar({
-  skill,
-  percentage,
-}: {
-  skill: string;
-  percentage: number;
-}) {
-  const barRef = useRef<HTMLDivElement>(null);
-  const progressRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const progress = progressRef.current;
-    if (!progress) return;
-
-    gsap.fromTo(
-      progress,
-      { width: "0%" },
-      {
-        width: `${percentage}%`,
-        duration: 1.2,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: barRef.current,
-          start: "top 85%",
-          toggleActions: "play none none none",
-        },
-      }
-    );
-  }, [percentage]);
-
-  return (
-    <div
-      ref={barRef}
-      className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 pb-4 sm:pb-5"
-    >
-      <span className="text-base sm:text-lg lg:text-xl font-semibold text-black">
-        {skill}
-      </span>
-      <div className="w-full sm:w-40 lg:w-48 h-3 sm:h-4 bg-[#072800]/10 rounded-full overflow-hidden">
-        <div
-          ref={progressRef}
-          className="h-full bg-[#072800] rounded-full transition-all"
-        ></div>
-      </div>
-    </div>
   );
 }

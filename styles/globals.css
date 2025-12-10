@@ -6,12 +6,16 @@
 }
 
 :root {
-  --background: #FAFAFA;
-  --font-sans: "Neue Montreal", sans-serif;
-  --foreground: #072800;
-  --accent: #072800;
+  --background: #F5F5DC;
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --foreground: #1a4d2e;
+  --accent: #FF8C42;
   --card-bg: #FFFFFF;
-  --text-secondary: #4A4A4A;
+  --text-secondary: #2d5a3d;
+  --dark-green: #1a4d2e;
+  --cream: #F5F5DC;
+  --orange: #FF8C42;
 }
 
 @theme inline {
@@ -32,11 +36,16 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-sans), sans-serif;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif), serif;
+  font-weight: 700;
+  color: var(--dark-green);
 }
 
 a {
